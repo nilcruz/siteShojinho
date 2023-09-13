@@ -1,46 +1,223 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    Login - E.M Dr. Roberto Shoji
+ <title>
+    Login - Secretaria E.M Dr. Roberto Shoji
   </title>
-  <link rel="stylesheet" href="../styles/login.css">
+  
+  <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+    
+    body{
+      font-family: 'Noto Sans', Sans-serif;
+      margin:0;      
+    }
+    
+    body * {
+      box-sizing:border-box;
+        
+    }
+    .main-login{
+      width:100vw;
+      height:100vh;
+      background: white;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    
+    .left-login{
+      width:50vw;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+        
+    }
+    
+    .left-login-image{
+      width:35vw;
+      
+    }
+    
+    .left-login > h1{
+      font-size:2vw;
+      color:rgb(13,106,173);
+      
+        
+    }
+       
+    
+    .right-login{
+      width:50vw;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      
+    }
+    
+    .card-login{
+      width:60%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      padding:30px 35px;
+      background-color: rgb(0,0,0,0.1);
+      border-radius: 15px;
+      box-shadow: 0px 5px 10px;
+    }
+    
+    .card-login > h1{
+      color:rgb(13,106,173);
+      font-weight:800;
+      margin:0;
+      
+    }
+    
+    .textfield {
+      width:100%;
+      display:flex;
+      flex-direction: column;
+      align-items:flex-start;
+      justify-content:center;
+      margin:5px 0px;
+      
+    }
+    
+    .textfield > input{
+      width:100%;
+      height: 30px;
+      border:none;
+      border-radius:10px;
+      padding: 10px;
+      color:rgb(13,106,173);
+      font-size: 10pt;
+      box-shadow: 0px 1px 3px;
+      outline:none;
+      box-sizing: border-box;
+    }
+
+    .textfield > input:hover{
+      transform: scale(1.02);
+    }
+
+    .textfield > label{
+      color:rgb(13,106,173);    
+    }
+    
+    .textfield > input::placeholder{
+      color:rgb(13,106,173);
+    }
+    
+    .btn-login{
+      width: 40%;
+      padding: 10px 0px;
+      margin: 15px;
+      border:none;
+      border-radius:10px;
+      outline:none;
+      text-transform: uppercase;
+      font-weight: 800;
+      color:rgb(13,106,173);
+      letter-spacing: 2px;
+      cursor: pointer;
+      box-shadow: 0px 10px 15px -12px;
+      transition: background-color 0.3s, transform 0.3s;	
+    }
+
+    .btn-login:hover {
+      background-color: green; 
+      transform: scale(1.02);
+      color:white;
+    }
+
+    
+    .footer-login {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px; /* Altura do rodapé */
+}
+
+  .footer-login p {
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+}
+    
+    @media only screen and (max-width:950px){
+      .card-login{
+        width:90%;       
+      }
+      
+    @media only screen and (max-width:600px){
+      .main-login{
+        flex-direction:column;    
+      }      
+      .left-login > h1{
+        display:none;
+      }   
+      .left-login{
+        width: 100%;
+        height:auto;
+      }
+      .right-login{
+        width: 100%;
+        height:auto;
+      }
+      
+      .left-login-image{
+        width:50vw; 
+      }
+      
+      .card-login{
+        width:90vw;
+      }
+    
+  </style>
 </head>
 <body>
+  
   <div class="main-login">
-    <div class="left-login">
+  <div class="left-login">
+    <h1>
+      Faca login e acesse a secretaria <br> online da escola E.M Dr Roberto Shoji</h1>
+    <img src="logo.png" class="left-login-image" alt="Logo">
+  </div>
+  <div class="right-login">
+    <div class="card-login">
       <h1>
-        Faca login e acesse a secretaria <br> online da escola E.M Dr Roberto Shoji</h1>
-      <img src="../images/logo.png" class="left-login-image" alt="Logo">
-    </div>
-    <div class="right-login">
-      <div class="card-login">
-        <h1>
-          LOGIN
-        </h1>
-        
-          <div class="textfield">
-            <label for="usuario">Usuario:</label>
-            <input type="text"name="usuario" placeholder="Usuario">
-          </div>
-        
-          <div class="textfield">
-          <label for="senha">Senha:</label>
-          <input type="password"name="senha" placeholder="Senha">
-          </div>
-          <button class="btn-login">Entrar</button>
-          
+        LOGIN
+      </h1>
+      
+        <div class="textfield">
+          <label for="usuario">Usuario:</label>
+          <input type="text"name="usuario" placeholder="Usuario">
         </div>
+      
+        <div class="textfield">
+        <label for="senha">Senha:</label>
+        <input type="password"name="senha" placeholder="Senha">
+        </div>
+
+	<button class="btn-login">Entrar</button>
+
+	<p style="font-family: 'Noto Sans', Sans-serif; color: rgb(13, 106, 173); margin-top: 10px;">
+  	Não possui cadastro? <a href="" style="text-decoration: underline; color: rgb(13, 106, 173); transition: color 0.5s;"> Clique aqui </a> e faça seu registro.
+	</p>
+
+        
       </div>
     </div>
-   </div>  
-  
-   <footer class="footer-login">
-    <p>&copy; 2023 Desenvolvido por Nilson Cruz. Todos os direitos reservados.</p>
-    </footer>
+  </div>
+ </div>
+
 </body>
-</html>
 
-
+<footer class="footer-login">
+<p>&copy; 2023 Desenvolvido por Nilson Cruz. Todos os direitos reservados.</p>
+</footer>
