@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Consultar Atestados Médicos - E.M Dr Roberto Shoji</title> 
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+        body{
+            width:100%;
+            font-family: 'Noto Sans', Sans-serif;
+            margin: 0;   
+        }
+
+        .menu-bar {
+          width: 100%;
+          background-color: rgb(12,106,173,0.8);
+          padding: 10px 0;
+
+      }
+
+      .menu-bar-text {
+       display: flex;
+       justify-content:center;
+       align-items: center;
+       color: white;
+
+   }
+
+   .menu-atestado{
+       display: flex;
+       justify-content:center;
+       align-items: center;
+       background-color:#E6E6E6
+
+   }
+
+   .btn-sair { 
+    border:none;
+    border-radius:6px;
+    outline:none;
+    text-transform: uppercase;
+    font-weight: 800;
+    color:rgb(13,106,173);
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+}
+
+.btn-sair:hover{
+    opacity: 0.8; 
+    background-color: red;  
+}
+
+.menu-btn-sair{
+  display: flex;
+  justify-content: flex-end;
+  margin-right:5px;
+
+}
+
+.menu-text-atestado{
+  font-size: 12px;
+
+}
+
+.menu-container-atestado{
+  width:100%;
+  height:15vw;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  gap: 20px;
+  align-items:center;
+
+}
+
+.tabela-aluno-atestado {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+}
+
+.tabela-aluno-atestado th, .tabela-aluno-atestado td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.tabela-aluno-atestado th {
+    background-color: #f2f2f2;
+}
+
+.styled-footer-atestado {
+    position: fixed;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.styled-footer-atestado p {
+    margin: 0;
+}
+
+.series-select {
+  width: 20%; 
+  margin: 0 auto; 
+  padding: 10px;
+  border: 1px solid #007bff; 
+  border-radius: 5px;
+  color: white; 
+  background-color: #007bff; 
+}     
+
+</style>
+</head>
+<body> 
+
+    <div class="menu-bar">
+        <div class="menu-btn-sair">
+            <button class="btn-sair">Sair</button>
+        </div>
+        <div class="menu-bar-text">
+            <h1> Secretaria Online - E.M Dr Roberto Shoji</h1>  
+        </div>
+    </div> 
+
+    <div class="menu-atestado">
+        <div class="menu-text-atestado">
+            <h1> Atestados Médicos </h1>
+        </div> 
+    </div>
+
+    <div class="menu-container-atestado">
+        <select class="series-select">
+          <option value="1">SELECIONE A SÉRIE</option>
+          <option value="1">1º ANO</option>
+          <option value="2">2º ANO</option>
+          <option value="3">3º ANO</option>
+          <option value="4">4º ANO</option>
+          <option value="5">5º ANO</option>
+      </select> 
+      
+       <table class="tabela-aluno-atestado">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Data do Atestado</th>
+                <th>Quantidade de Dias</th>
+                <th>Data de Retorno</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Joao</td>
+                <td>30/08/2023</td>
+                <td>10</td>
+                <td>05/09/2023</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Maria</td>
+                <td>30/08/2023</td>
+                <td>10</td>
+                <td>05/09/2023</td>
+            </tr> 
+
+            <tr>
+                <td>3</td>
+                <td>Pedro</td>
+                <td>30/08/2023</td>
+                <td>10</td>
+                <td>05/09/2023</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Alice</td>
+                <td>30/08/2023</td>
+                <td>10</td>
+                <td>05/09/2023</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Enzo</td>
+                <td>30/08/2023</td>
+                <td>10</td>
+                <td>05/09/2023</td>
+            </tr>  
+        </table>
+
+    </div> 
+</body>
+
+<footer class="styled-footer-atestado">
+    <p>&copy; 2023 Desenvolvido por Nilson Cruz - Todos os direitos reservados</p>
+</footer>  
+
+</html>

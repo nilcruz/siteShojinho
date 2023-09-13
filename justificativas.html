@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultar Justificativas - E.M Dr. Roberto Shoji</title>
+
+  <head>
+    <style>
+
+
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+      
+      body{
+        font-family: 'Noto Sans', Sans-serif;
+        margin: 0;
+        background-color: #f5f5f5;   
+      }
+
+      .menu-bar {
+        width: 100%;
+        background-color: rgb(12,106,173,0.8);
+        padding: 10px 0;
+
+      }
+
+      .menu-bar-text {
+       display: flex;
+       justify-content:center;
+       align-items: center;
+       color: white;
+
+     }
+
+     .menu-justificativa{
+       display: flex;
+       justify-content:center;
+       align-items: center;
+       background-color:#E6E6E6;
+
+     }
+
+     .btn-sair { 
+      border:none;
+      border-radius:6px;
+      outline:none;
+      text-transform: uppercase;
+      font-weight: 800;
+      color:rgb(13,106,173);
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+
+    }
+
+    .btn-sair:hover{
+      opacity: 0.8; /* Reduz a opacidade quando o mouse passa por cima */
+      background-color: red;  
+    }
+
+    .menu-btn-sair{
+      display: flex;
+      justify-content: flex-end;
+      margin-right:5px;
+
+    }
+
+    .menu-justificativa-text{
+      font-size: 12px;
+
+    }
+
+    .menu-container{
+      width:100%;
+      height:45vw;
+      display:flex;
+      flex-direction:column;
+      justify-content: center;
+      gap: 40px;
+      align-items:center;
+      margin-top:10px;
+
+    }
+
+    .card{
+      width:50%;
+      height:50%;
+      border-radius: 15px;
+      background-color:#f5f5f5;
+      box-shadow: 0px 5px 5px;
+
+    }
+
+    .card-text-name > h2{
+      font-size: 16px;
+      margin-left:5px
+    }
+
+    .card-text-data > h2{
+      font-size: 16px;
+      margin-left:5px;
+    }
+
+    .card-text-motivo > h2{
+      font-size: 16px;
+      margin-left:5px;
+      text-align: center;
+    }
+
+    .card:hover{
+      opacity: 0.9;
+      cursor:pointer
+    }
+
+    .card-text-motivo {
+      
+      overflow: hidden; 
+    }
+
+    .motivo-text {
+      max-height: 80px;
+      overflow-y: auto;
+    }
+
+    .footer-justificativa {
+      position:fixed;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      bottom: 0;
+      width: 100%;
+      height: 40px; /* Altura do rodapé */
+    }
+
+    .footer-justificativa p {
+      margin: 0;
+      padding: 15px 0;
+    }  
+
+    .series-select {
+      width: 20%; 
+      margin: 0 auto; 
+      padding: 10px;
+      border: 1px solid #007bff; 
+      border-radius: 5px;
+      color: white; 
+      background-color: #007bff; 
+    }   
+
+  </style>
+</head>
+
+<body> 
+
+  <div class="menu-bar">
+    <div class="menu-btn-sair">
+      <button class="btn-sair">Sair</button>
+    </div>
+    <div class="menu-bar-text">
+      <h1> Secretaria Online - E.M Dr Roberto Shoji </h1>  
+    </div>
+  </div> 
+  
+  <div class="menu-justificativa">
+    <div class="menu-justificativa-text">
+      <h1> Justificativas </h1>
+    </div>
+  </div>
+
+  
+  <div class="menu-container"> 
+
+    <select class="series-select">
+      <option value="1">SELECIONE A SÉRIE</option>
+      <option value="1">1º ANO</option>
+      <option value="2">2º ANO</option>
+      <option value="3">3º ANO</option>
+      <option value="4">4º ANO</option>
+      <option value="5">5º ANO</option>
+    </select>
+
+    <div class="card">
+
+      <div class="card-text-name">
+        <h2> Nome do Aluno: Pedro da Silva Santos </h2>
+      </div>
+
+      <div class="card-text-data">
+        <h2> Data:12/09/2023 </h2>
+      </div>
+
+      <div class="card-text-motivo">
+        <h2> Motivo </h2>
+        <div class="motivo-text">
+          <p>O aluno pedro se ausentou a escola devido a questões pessoais. A familia precisou viajar e não poderá traze-lo para aula, o aluno ficará ausente dos dias 13/09 à 25/09. A familia foi orientada pelo secretario da unidade escolar e tomou ciencia de que as ausencias poderiam prejudicar o aluno.</p>
+        </div>   
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-text-name">
+        <h2> Nome do Aluno: Josefina Maria </h2>
+      </div>
+
+      <div class="card-text-data">
+        <h2> Data:12/09/2023 </h2>
+      </div>
+
+      <div class="card-text-motivo">
+        <h2> Motivo </h2>
+        <div class="motivo-text">
+          <p>A aluna Josefina Maria não pôde comparecer à escola devido a uma doença, o qual foi devidamente documentado e justificado pela própria. A escola foi notificada com antecedência sobre a ausência não planejada e está ciente das circunstâncias que levaram à não presença da aluna durante o período especificado (12/09 à 20/09). Qualquer trabalho escolar perdido durante a ausência será devidamente recuperado e as atividades acadêmicas serão ajustadas conforme necessário para acomodar a situação."</p>
+        </div> 
+      </div>
+      <div class="descricao-justificativa">
+        
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-text-name">
+        <h2> Nome do Aluno: Isabela Rocha Pereira </h2>
+      </div>
+
+      <div class="card-text-data">
+        <h2> Data:15/09/2023 </h2>
+      </div>
+
+      <div class="card-text-motivo">
+        <h2> Motivo </h2>
+        <div class="motivo-text">
+          <p>A aluna Josefina Maria não pôde comparecer à escola devido a uma doença, o qual foi devidamente documentado e justificado pela própria. A escola foi notificada com antecedência sobre a ausência não planejada e está ciente das circunstâncias que levaram à não presença da aluna durante o período especificado (12/09 à 20/09). Qualquer trabalho escolar perdido durante a ausência será devidamente recuperado e as atividades acadêmicas serão ajustadas conforme necessário para acomodar a situação."</p>
+        </div> 
+      </div>         
+    </div>
+
+  </div>
+  
+</body>
+<footer class="footer-justificativa">
+  <p>&copy; 2023 Nilson Cruz. Todos os direitos reservados.</p>
+  </html>
