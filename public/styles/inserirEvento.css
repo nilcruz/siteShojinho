@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inserir Lembretes - E.M Dr. Roberto </title>
-    <style>
-
 /* Estilos CSS atualizados */
 
 body {
@@ -129,53 +121,3 @@ h1 {
  background-color: #f0f0f0; /* Cor de fundo cinza */
  cursor: not-allowed; /* Cursor de não permitido para indicar que está bloqueado */
 }
-</style>
-</head>
-
-<body>
-
-    <div class="menu-bar">
-       <div class="menu-btn-sair">
-         <button class="btn-sair">Sair</button>
-     </div>
-
-     <div class="menu-bar-text">
-      <h1> Secretaria Online - E.M Dr Roberto Shoji </h1>  
-  </div>
-</div> 
-
-<form>
-    <h1>Adicionar Lembrete</h1> 
-    <label for="eventName">Titulo do Lembrete:</label>
-    <input type="text" id="eventName" required>
-
-    <label for="eventDate">Data de Inserção:</label>
-    <input type="date" id="eventDate" readonly>
-
-    <label for="eventDescription">Descrição do Lembrete:</label>
-    <textarea id="eventDescription" rows="4" cols="50"></textarea>
-
-    <input type="submit" class="btn-submit" value="Adicionar Lembrete">
-</form>
-
-<script>
-        // Defina a data atual como o valor do campo de data e bloqueia.
-    document.addEventListener("DOMContentLoaded", function() {
-        var eventDateInput = document.getElementById("eventDate");
-        var today = new Date();
-        var year = today.getFullYear();
-        var month = String(today.getMonth() + 1).padStart(2, "0");
-        var day = String(today.getDate()).padStart(2, "0");
-        var currentDate = year + "-" + month + "-" + day;
-        eventDateInput.value = currentDate;
-        eventDateInput.setAttribute("readonly", "true");
-    });
-
-</script>
-
-<footer class="footer-login">
-    <p>&copy; 2023 Desenvolvido por Nilson Cruz - Todos os direitos reservados</p>
-</footer>  
-</body>
-
-</html>
