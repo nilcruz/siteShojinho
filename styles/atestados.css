@@ -70,6 +70,13 @@ align-items:center;
 
 }
 
+.series-select:hover{
+cursor:pointer;
+border: 1px solid #007bff;
+transform: scale(1.02);
+
+}
+
 .tabela-aluno-atestado {
 width: 80%;
 border-collapse: collapse;
@@ -85,6 +92,11 @@ text-align: left;
 
 .tabela-aluno-atestado th {
 background-color: #f2f2f2;
+}
+
+
+.tabela-aluno-atestado td:last-child {
+width: 30px; 
 }
 
 .styled-footer-atestado {

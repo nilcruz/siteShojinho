@@ -1,0 +1,95 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.menu-bar-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.menu-bar {
+  width: 100%;
+  background-color: rgb(12, 106, 173, 0.8);
+  padding: 10px 0;
+}
+
+.menu-inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6e6e6;
+}
+
+.btn-sair {
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: rgb(13, 106, 173);
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.btn-sair:hover {
+  opacity: 0.8;
+  /* Reduz a opacidade quando o mouse passa por cima */
+  background-color: red;
+}
+
+.menu-btn-sair {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+.menu-inicio-text {
+  font-size: 12px;
+}
+
+.conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.imagem {
+  width: 100px; /* Largura da imagem */
+  height: 100px; /* Altura da imagem */
+  margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.texto {
+  font-size: 18px;
+  color: black;
+}
+
+.footer-inicio {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.box:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
