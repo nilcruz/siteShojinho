@@ -1,114 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>Inserir Atestado Médico - E.M Dr. Roberto Shoji</title> 
-<link rel="stylesheet" href="../styles/inserirAtestado.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Inserir Atestado Médico - E.M Dr. Roberto Shoji</title>
+  <link rel="stylesheet" href="../styles/inserirAtestado.css">
 </head>
 
 <body>
 
-    <div class="menu-bar">
-     <div class="menu-btn-sair">
-       <button class="btn-sair">Sair</button>
-   </div>
+  <div class="menu-bar">
+    <div class="menu-btn-sair">
+      <button class="btn-sair">Sair</button>
+    </div>
 
-   <div class="menu-bar-text">
-       <h1> Secretaria Online - E.M Dr Roberto Shoji </h1>  
-   </div>
-</div> 
+    <div class="menu-bar-text">
+      <h1> Secretaria Online - E.M Dr Roberto Shoji </h1>
+    </div>
+  </div>
 
-<div class="container">
+  <div class="container">
     <h2>Formulário de Atestado Escolar</h2>
     <form>
 
-        <div class="form-group">
-            <label for="nomeAluno">Nome do Aluno:</label>
-            <input type="text" id="nomeAluno" name="nomeAluno" required>
-            <span class="error-message">Preencha este campo</span>
-        </div>
+      <div class="form-group">
+        <label for="nomeAluno">Nome do Aluno:</label>
+        <input type="text" id="nomeAluno" name="nomeAluno" required>
+        <span class="error-message">Preencha este campo</span>
+      </div>
 
-        <div class="form-group">
-            <label for="serieAluno">Série do Aluno:</label>
-            <select id="serieAluno" name="serieAluno" required>
-                <option value="">Selecione uma série</option> <!-- Opção inicial -->
-                <option value="1">1º Ano</option>
-                <option value="2">2º Ano</option>
-                <option value="3">3º Ano</option>
-                <option value="4">4º Ano</option>
-                <option value="5">5º Ano</option>
-            </select>
-            <span class="error-message">Selecione a série</span>
-        </div>
+      <div class="form-group">
+        <label for="serieAluno">Série do Aluno:</label>
+        <select id="serieAluno" name="serieAluno" required>
+          <option value="">Selecione uma série</option> <!-- Opção inicial -->
+          <option value="1">1º Ano</option>
+          <option value="2">2º Ano</option>
+          <option value="3">3º Ano</option>
+          <option value="4">4º Ano</option>
+          <option value="5">5º Ano</option>
+        </select>
+        <span class="error-message">Selecione a série</span>
+      </div>
 
-        <div class="form-group">
-            <label for="dataAtestado">Data do Atestado:</label>
-            <input type="date" id="dataAtestado" name="dataAtestado" required>
-            <span class="error-message">Preencha este campo</span>
-        </div>
+      <div class="form-group">
+        <label for="dataAtestado">Data do Atestado:</label>
+        <input type="date" id="dataAtestado" name="dataAtestado" required>
+        <span class="error-message">Preencha este campo</span>
+      </div>
 
-        <div class="form-group">
-            <label for="quantidadeDias">Quantidade de Dias:</label>
-            <input type="number" id="quantidadeDias" name="quantidadeDias" required>
-            <span class="error-message">Preencha este campo</span>
-            <p class="activity-message"></p> <!-- Mensagem de atividade domiciliar -->
-        </div>
+      <div class="form-group">
+        <label for="quantidadeDias">Quantidade de Dias:</label>
+        <input type="number" id="quantidadeDias" name="quantidadeDias" required>
+        <span class="error-message">Preencha este campo</span>
+        <p class="activity-message"></p> <!-- Mensagem de atividade domiciliar -->
+      </div>
 
-        <div class="form-group">
-            <label for="dataRetorno">Data de Retorno:</label>
-            <input type="date" id="dataRetorno" name="dataRetorno" readonly>
-        </div>
+      <div class="form-group">
+        <label for="dataRetorno">Data de Retorno:</label>
+        <input type="date" id="dataRetorno" name="dataRetorno" readonly>
+      </div>
 
-        <div class="form-group">
-            <input type="submit" value="Enviar">
-        </div>
+      <div class="form-group">
+        <input type="submit" value="Enviar">
+      </div>
     </form>
 
-</div>
+  </div>
 
-<script>
+  <script>
     var form = document.querySelector("form");
     var inputs = form.querySelectorAll("input, select");
     var quantidadeDiasInput = document.getElementById("quantidadeDias");
     var activityMessage = document.querySelector(".activity-message");
 
     inputs.forEach(function (input) {
-        var errorMessage = input.nextElementSibling;
-        input.addEventListener("input", function () {
-            if (input.value) {
-                errorMessage.classList.remove("active");
-            } else {
-                errorMessage.classList.add("active");
-            }
-        });
+      var errorMessage = input.nextElementSibling;
+      input.addEventListener("input", function () {
+        if (input.value) {
+          errorMessage.classList.remove("active");
+        } else {
+          errorMessage.classList.add("active");
+        }
+      });
     });
 
     form.addEventListener("submit", function (event) {
-        inputs.forEach(function (input) {
-            var errorMessage = input.nextElementSibling;
-            if (input.hasAttribute("required") && !input.value) {
-                errorMessage.classList.add("active");
-                event.preventDefault();
-            } else {
-                errorMessage.classList.remove("active");
-            }
-        });
+      inputs.forEach(function (input) {
+        var errorMessage = input.nextElementSibling;
+        if (input.hasAttribute("required") && !input.value) {
+          errorMessage.classList.add("active");
+          event.preventDefault();
+        } else {
+          errorMessage.classList.remove("active");
+        }
+      });
     });
 
     quantidadeDiasInput.addEventListener("input", function () {
-        var quantidadeDias = parseInt(quantidadeDiasInput.value);
-        if (!isNaN(quantidadeDias) && quantidadeDias >= 15) {
-            activityMessage.textContent = "O aluno estará de atividade domiciliar, contatar professora";
-        } else {
-            activityMessage.textContent = "";
-        }
+      var quantidadeDias = parseInt(quantidadeDiasInput.value);
+      if (!isNaN(quantidadeDias) && quantidadeDias >= 15) {
+        activityMessage.textContent = "O aluno estará de atividade domiciliar, contatar professora";
+      } else {
+        activityMessage.textContent = "";
+      }
     });
-</script>
+  </script>
 </body>
 
 <footer class="footer-login">
-    <p>&copy; 2023 Desenvolvido por Nilson Cruz. Todos os direitos reservados.</p>
+  <p>&copy; 2023 Desenvolvido por Nilson Cruz. Todos os direitos reservados.</p>
+
 </html>

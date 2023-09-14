@@ -1,92 +1,94 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Inserir Justificativas - E.M Dr Roberto Shoji </title>
-    <link rel="stylesheet" href="../styles/inserirJustificativa.css">
+  <meta charset="UTF-8">
+  <title>Inserir Justificativas - E.M Dr Roberto Shoji </title>
+  <link rel="stylesheet" href="../styles/inserirJustificativa.css">
 </head>
+
 <body>
-    <div class="menu-bar">
-       <div class="menu-btn-sair">
-         <button class="btn-sair">Sair</button>
-     </div>
+  <div class="menu-bar">
+    <div class="menu-btn-sair">
+      <button class="btn-sair">Sair</button>
+    </div>
 
-     <div class="menu-bar-text">
-         <h1> Secretaria Online - E.M Dr Roberto Shoji </h1>  
-     </div>
- </div> 
+    <div class="menu-bar-text">
+      <h1> Secretaria Online - E.M Dr Roberto Shoji </h1>
+    </div>
+  </div>
 
- <div class="container">
+  <div class="container">
     <h2>Inserir Justificativas</h2>
     <form>
-        <div class="form-group">
-            <label for="nomeAluno">Nome do Aluno:</label>
-            <input type="text" id="nomeAluno" name="nomeAluno" required>
-            <span class="error-message">Preencha este campo</span>
-        </div>
+      <div class="form-group">
+        <label for="nomeAluno">Nome do Aluno:</label>
+        <input type="text" id="nomeAluno" name="nomeAluno" required>
+        <span class="error-message">Preencha este campo</span>
+      </div>
 
-        <div class="form-group">
-            <label for="serieAluno">Serie do Aluno:</label>
-            <select id="serieAluno" name="serieAluno" required>
-                <option value="">Selecione a serie</option>
-                <option value="1">1 Ano</option>
-                <option value="2">2 Ano</option>
-                <option value="3">3 Ano</option>
-                <option value="4">4 Ano</option>
-                <option value="5">5 Ano</option>
-            </select>
-            <span class="error-message">Selecione a serie</span>
-        </div>
+      <div class="form-group">
+        <label for="serieAluno">Serie do Aluno:</label>
+        <select id="serieAluno" name="serieAluno" required>
+          <option value="">Selecione a serie</option>
+          <option value="1">1 Ano</option>
+          <option value="2">2 Ano</option>
+          <option value="3">3 Ano</option>
+          <option value="4">4 Ano</option>
+          <option value="5">5 Ano</option>
+        </select>
+        <span class="error-message">Selecione a serie</span>
+      </div>
 
-        <div class="form-group">
-            <label for="dataAtestado">Data da justificativa:</label>
-            <input type="date" id="dataAtestado" name="dataAtestado" required>
-            <span class="error-message">Preencha este campo</span>
-        </div>
+      <div class="form-group">
+        <label for="dataAtestado">Data da justificativa:</label>
+        <input type="date" id="dataAtestado" name="dataAtestado" required>
+        <span class="error-message">Preencha este campo</span>
+      </div>
 
-        <div class="form-group">
-            <label for="motivo">Motivo:</label>
-            <textarea id="motivo" name="motivo" required></textarea>
-            <span class="error-message">Preencha este campo</span>
-        </div>
+      <div class="form-group">
+        <label for="motivo">Motivo:</label>
+        <textarea id="motivo" name="motivo" required></textarea>
+        <span class="error-message">Preencha este campo</span>
+      </div>
 
-        <div class="form-group">
-            <input type="submit" value="Enviar">
-        </div>
+      <div class="form-group">
+        <input type="submit" value="Enviar">
+      </div>
 
-        <script>
-           var form = document.querySelector("form");
-           var inputs = form.querySelectorAll("input, select, textarea");
+      <script>
+        var form = document.querySelector("form");
+        var inputs = form.querySelectorAll("input, select, textarea");
 
-           inputs.forEach(function (input) {
+        inputs.forEach(function (input) {
+          var errorMessage = input.nextElementSibling;
+          input.addEventListener("input", function () {
+            if (input.value) {
+              errorMessage.classList.remove("active");
+            } else {
+              errorMessage.classList.add("active");
+            }
+          });
+        });
+
+        form.addEventListener("submit", function (event) {
+          inputs.forEach(function (input) {
             var errorMessage = input.nextElementSibling;
-            input.addEventListener("input", function () {
-                if (input.value) {
-                    errorMessage.classList.remove("active");
-                } else {
-                    errorMessage.classList.add("active");
-                }
-            });
+            if (input.hasAttribute("required") && !input.value) {
+              errorMessage.classList.add("active");
+              event.preventDefault();
+            } else {
+              errorMessage.classList.remove("active");
+            }
+          });
         });
+      </script>
 
-           form.addEventListener("submit", function (event) {
-            inputs.forEach(function (input) {
-                var errorMessage = input.nextElementSibling;
-                if (input.hasAttribute("required") && !input.value) {
-                    errorMessage.classList.add("active");
-                    event.preventDefault();
-                } else {
-                    errorMessage.classList.remove("active");
-                }
-            });
-        });
-    </script>
-
-</form>
-</div>
+    </form>
+  </div>
 </body>
 
 <footer class="footer-login">
-    <p>&copy; 2023 Desenvolvido por Nilson Cruz. Todos os direitos reservados.</p>
+  <p>&copy; 2023 Desenvolvido por Nilson Cruz. Todos os direitos reservados.</p>
 
 </html>

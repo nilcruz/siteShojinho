@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  background-color: white;
+  /* Fundo branco */
+  color: rgb(13, 106, 173);
+  /* Cor de texto */
+}
+
+.main-login {
+  width: 90%;
+  margin: 0 auto;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-login {
+  width: 50vw;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.left-login-image {
+  width: 35vw;
+}
+
+.left-login>h1 {
+  font-size: 2vw;
+  color: rgb(13, 106, 173);
+}
+
+.right-login {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-login {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 35px;
+  background-color: rgb(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px;
+}
+
+.card-login>h1 {
+  color: rgb(13, 106, 173);
+  font-weight: 800;
+  margin: 0;
+}
+
+.textfield {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 5px 0px;
+}
+
+.textfield>input[type="text"],
+.textfield>input[type="password"],
+.textfield>input[type="date"],
+.textfield>input[type="email"] {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: rgb(13, 106, 173);
+  font-size: 10pt;
+  box-shadow: 0px 1px 3px;
+  outline: none;
+  box-sizing: border-box;
+  margin: 5px 0;
+
+}
+
+.textfield>input[type="text"]:hover,
+.textfield>input[type="password"]:hover,
+.textfield>input[type="date"]:hover,
+.textfield>input[type="email"]:hover {
+
+  transform: scale(1.02);
+
+}
+
+.textfield>input::placeholder {
+  color: rgb(13, 106, 173);
+
+}
+
+.btn-cadastrar {
+  width: 40%;
+  padding: 10px 0px;
+  margin: 15px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: rgb(13, 106, 173);
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 0px 10px 15px -12px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-cadastrar:hover {
+  background-color: green;
+  transform: scale(1.02);
+  color: white;
+}
+
+.footer-login {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+}
+
+.footer-login p {
+  margin: 0;
+  padding: 15px 0;
+
+}

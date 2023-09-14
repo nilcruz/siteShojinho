@@ -1,182 +1,184 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lembretes - Dr. Roberto Shoji</title>
-    <style>
-      
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-      
-        body{
-            font-family: 'Noto Sans', Sans-serif;
-            margin: 0;   
-        }
-      
-        .menu-bar-text {
-            display: flex;
-            justify-content:center;
-            align-items: center;
-            color: white;
-        }   
-        .menu-bar {
-            width: 100%;
-            background-color: rgb(12,106,173,0.8);
-            padding: 10px 0;
-      
-        }
-      
-        .menu-justificativa{
-            display: flex;
-            justify-content:center;
-            align-items: center;
-            background-color:#E6E6E6
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembretes - Dr. Roberto Shoji</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
-        }
-      
-         .btn-sair { 
-            border:none;
-            border-radius:6px;
-            outline:none;
-            text-transform: uppercase;
-            font-weight: 800;
-            color:rgb(13,106,173);
-            letter-spacing: 2px;
-            cursor: pointer;
-            transition: opacity 0.3s ease;
-        }
-      
-        .card {
-            width: 20%;
-            background-color: #f5f5f5;
-            color: #333;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            align-items:center;
-            padding: 15px;
-            margin: 10px;
-            display: inline-block;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-        }
-      
-        .btn-sair:hover{
-            opacity: 0.8; /* Reduz a opacidade quando o mouse passa por cima */
-            background-color: red;  
-        }
-      
-        .menu-btn-sair{
-            display: flex;
-            justify-content: flex-end;
-            margin-right:5px;
+    body {
+      font-family: 'Noto Sans', Sans-serif;
+      margin: 0;
+    }
 
-        }
-      
-        .menu-justificativa-text{
-            font-size: 12px;
-      
-        }
+    .menu-bar-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
 
-        .card .campo {
-            font-weight: bold;
-        }
-      
-        .card .descricao {
-            margin-top: 10px;
-        }
-      
-    </style>
+    .menu-bar {
+      width: 100%;
+      background-color: rgb(12, 106, 173, 0.8);
+      padding: 10px 0;
+
+    }
+
+    .menu-justificativa {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #E6E6E6
+    }
+
+    .btn-sair {
+      border: none;
+      border-radius: 6px;
+      outline: none;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: rgb(13, 106, 173);
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+
+    .card {
+      width: 20%;
+      background-color: #f5f5f5;
+      color: #333;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      align-items: center;
+      padding: 15px;
+      margin: 10px;
+      display: inline-block;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-sair:hover {
+      opacity: 0.8;
+      /* Reduz a opacidade quando o mouse passa por cima */
+      background-color: red;
+    }
+
+    .menu-btn-sair {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 5px;
+
+    }
+
+    .menu-justificativa-text {
+      font-size: 12px;
+
+    }
+
+    .card .campo {
+      font-weight: bold;
+    }
+
+    .card .descricao {
+      margin-top: 10px;
+    }
+  </style>
 </head>
+
 <body>
-  
-   <div class="menu-bar">
-      <div class="menu-btn-sair">
-        <button class="btn-sair">Sair</button>
-      </div>
+
+  <div class="menu-bar">
+    <div class="menu-btn-sair">
+      <button class="btn-sair">Sair</button>
+    </div>
     <div class="menu-bar-text">
-      <h1> Secretaria Online - E.M Dr Roberto Shoji </h1>  
+      <h1> Secretaria Online - E.M Dr Roberto Shoji </h1>
     </div>
-   </div>
-  
-   <div class="menu-justificativa">
-      <div class="menu-justificativa-text">
-        <h1> Lembretes </h1>
-      </div>
   </div>
-  
-    <div class="card">
-        <div class="campo">Data de Inserção:</div>
-        <div>13 de setembro de 2023</div>
-        <div class="campo">Título do Lembrete:</div>
-        <div>Lembrete 1</div>
-        <div class="campo">Descrição do Lembrete:</div>
-        <div class="descricao">Este é o primeiro lembrete.</div>
-    </div>
 
-    <div class="card">
-        <div class="campo">Data de Inserção:</div>
-        <div>14 de setembro de 2023</div>
-        <div class="campo">Título do Lembrete:</div>
-        <div>Lembrete 2</div>
-        <div class="campo">Descrição do Lembrete:</div>
-        <div class="descricao">Este é o segundo lembrete.</div>
+  <div class="menu-justificativa">
+    <div class="menu-justificativa-text">
+      <h1> Lembretes </h1>
     </div>
-  
-      <div class="card">
-        <div class="campo">Data de Inserção:</div>
-        <div>14 de setembro de 2023</div>
-        <div class="campo">Título do Lembrete:</div>
-        <div>Lembrete 2</div>
-        <div class="campo">Descrição do Lembrete:</div>
-        <div class="descricao">Este é o segundo lembrete.</div>
-    </div>
-  
-      <div class="card">
-        <div class="campo">Data de Inserção:</div>
-        <div>14 de setembro de 2023</div>
-        <div class="campo">Título do Lembrete:</div>
-        <div>Lembrete 2</div>
-        <div class="campo">Descrição do Lembrete:</div>
-        <div class="descricao">Este é o segundo lembrete.</div>
-    </div>
-  
-        <div class="card">
-        <div class="campo">Data de Inserção:</div>
-        <div>14 de setembro de 2023</div>
-        <div class="campo">Título do Lembrete:</div>
-        <div>Lembrete 2</div>
-        <div class="campo">Descrição do Lembrete:</div>
-        <div class="descricao">Este é o segundo lembrete.</div>
-    </div>
-  
-        <div class="card">
-        <div class="campo">Data de Inserção:</div>
-        <div>14 de setembro de 2023</div>
-        <div class="campo">Título do Lembrete:</div>
-        <div>Lembrete 2</div>
-        <div class="campo">Descrição do Lembrete:</div>
-        <div class="descricao">Este é o segundo lembrete.</div>
-    </div>
-  
-        <div class="card">
-        <div class="campo">Data de Inserção:</div>
-        <div>14 de setembro de 2023</div>
-        <div class="campo">Título do Lembrete:</div>
-        <div>Lembrete 2</div>
-        <div class="campo">Descrição do Lembrete:</div>
-        <div class="descricao">Este é o segundo lembrete.</div>
-    </div>
-  
-        <div class="card">
-        <div class="campo">Data de Inserção:</div>
-        <div>14 de setembro de 2023</div>
-        <div class="campo">Título do Lembrete:</div>
-        <div>Lembrete 2</div>
-        <div class="campo">Descrição do Lembrete:</div>
-        <div class="descricao">Este é o segundo lembrete.</div>
-    </div>
-  
-    <script>
+  </div>
 
-    </script>
+  <div class="card">
+    <div class="campo">Data de Inserção:</div>
+    <div>13 de setembro de 2023</div>
+    <div class="campo">Título do Lembrete:</div>
+    <div>Lembrete 1</div>
+    <div class="campo">Descrição do Lembrete:</div>
+    <div class="descricao">Este é o primeiro lembrete.</div>
+  </div>
+
+  <div class="card">
+    <div class="campo">Data de Inserção:</div>
+    <div>14 de setembro de 2023</div>
+    <div class="campo">Título do Lembrete:</div>
+    <div>Lembrete 2</div>
+    <div class="campo">Descrição do Lembrete:</div>
+    <div class="descricao">Este é o segundo lembrete.</div>
+  </div>
+
+  <div class="card">
+    <div class="campo">Data de Inserção:</div>
+    <div>14 de setembro de 2023</div>
+    <div class="campo">Título do Lembrete:</div>
+    <div>Lembrete 2</div>
+    <div class="campo">Descrição do Lembrete:</div>
+    <div class="descricao">Este é o segundo lembrete.</div>
+  </div>
+
+  <div class="card">
+    <div class="campo">Data de Inserção:</div>
+    <div>14 de setembro de 2023</div>
+    <div class="campo">Título do Lembrete:</div>
+    <div>Lembrete 2</div>
+    <div class="campo">Descrição do Lembrete:</div>
+    <div class="descricao">Este é o segundo lembrete.</div>
+  </div>
+
+  <div class="card">
+    <div class="campo">Data de Inserção:</div>
+    <div>14 de setembro de 2023</div>
+    <div class="campo">Título do Lembrete:</div>
+    <div>Lembrete 2</div>
+    <div class="campo">Descrição do Lembrete:</div>
+    <div class="descricao">Este é o segundo lembrete.</div>
+  </div>
+
+  <div class="card">
+    <div class="campo">Data de Inserção:</div>
+    <div>14 de setembro de 2023</div>
+    <div class="campo">Título do Lembrete:</div>
+    <div>Lembrete 2</div>
+    <div class="campo">Descrição do Lembrete:</div>
+    <div class="descricao">Este é o segundo lembrete.</div>
+  </div>
+
+  <div class="card">
+    <div class="campo">Data de Inserção:</div>
+    <div>14 de setembro de 2023</div>
+    <div class="campo">Título do Lembrete:</div>
+    <div>Lembrete 2</div>
+    <div class="campo">Descrição do Lembrete:</div>
+    <div class="descricao">Este é o segundo lembrete.</div>
+  </div>
+
+  <div class="card">
+    <div class="campo">Data de Inserção:</div>
+    <div>14 de setembro de 2023</div>
+    <div class="campo">Título do Lembrete:</div>
+    <div>Lembrete 2</div>
+    <div class="campo">Descrição do Lembrete:</div>
+    <div class="descricao">Este é o segundo lembrete.</div>
+  </div>
+
+  <script>
+
+  </script>
 </body>
+
 </html>
