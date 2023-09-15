@@ -82,6 +82,9 @@ body {
 }
 
 .conteudo {
+  width: 90%;
+  margin: 0 auto;
+  min-height: 90vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
