@@ -1,48 +1,51 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="C:\Users\gilsonj\Desktop\Neto\siteShojinho-main\styles\alunos.css">
-    <title>Alunos - E.M Dr Roberto Shoji</title>
-</head>
-<body>
-    <div class="menu-alunos">
-        <h1>Alunos</h1>
-    </div>
-    <div class="container">
-        <div class="card" onclick="toggleInformacoes(this)">
-            <h2>Nome Completo 1</h2>
-            <div class="informacoes-extras">
-                <p>Data de Nascimento: 01/01/1990</p>
-                <p>RA: 123456</p>
-                <p>Autorizado a sair sozinho?: Sim</p>
-                <p>Telefones para contato: (13) 9-9166-4423</p>
-            </div>
-        </div>
-        <div class="card" onclick="toggleInformacoes(this)">
-            <h2>Nome Completo 2</h2>
-            <div class="informacoes-extras">
-                <p>Data de Nascimento: 02/02/1995</p>
-                <p>RA: 654321</p>
-                <p>Autorizado a sair sozinho?: Não</p>
-                <p>Telefones para contato: (987) 654-3210</p>
-            </div>
-        </div>
-    </div>
 
-    <script>
-        function toggleInformacoes(card) {
-            // Encontre as informações extras dentro do card clicado
-            const informacoesExtra = card.querySelector('.informacoes-extras');
-            
-            // Alterne a visibilidade das informações extras (mostrar/ocultar)
-            if (informacoesExtra.style.display === 'block') {
-                informacoesExtra.style.display = 'none';
-            } else {
-                informacoesExtra.style.display = 'block';
-            }
-        }
-    </script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="C:\Users\gilsonj\Desktop\Neto\siteShojinho-main\styles\alunos.css">
+  <title>Alunos - E.M Dr Roberto Shoji</title>
+</head>
+
+<body>
+  <div class="menu-alunos">
+    <h1>Alunos</h1>
+  </div>
+  <div class="container">
+    <div class="card" onclick="toggleInformacoes(this)">
+      <h2>Nome Completo 1</h2>
+      <div class="informacoes-extras">
+        <p>Data de Nascimento: 01/01/1990</p>
+        <p>RA: 123456</p>
+        <p>Autorizado a sair sozinho?: Sim</p>
+        <p>Telefones para contato: (13) 9-9166-4423</p>
+      </div>
+    </div>
+    <div class="card" onclick="toggleInformacoes(this)">
+      <h2>Nome Completo 2</h2>
+      <div class="informacoes-extras">
+        <p>Data de Nascimento: 02/02/1995</p>
+        <p>RA: 654321</p>
+        <p>Autorizado a sair sozinho?: Não</p>
+        <p>Telefones para contato: (987) 654-3210</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleInformacoes(card) {
+      // Encontre as informações extras dentro do card clicado
+      const informacoesExtra = card.querySelector('.informacoes-extras');
+
+      // Alterne a visibilidade das informações extras (mostrar/ocultar)
+      if (informacoesExtra.style.display === 'block') {
+        informacoesExtra.style.display = 'none';
+      } else {
+        informacoesExtra.style.display = 'block';
+      }
+    }
+  </script>
 </body>
+
 </html>

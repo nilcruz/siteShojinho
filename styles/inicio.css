@@ -6,52 +6,79 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-.menu-bar-text {
+.menu-container {
+  width: 100%;
+  background-color: rgb(12, 106, 173, 0.8);
+}
+
+.menu-content {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 0;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-content h1 {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+}
+
+
+.btn-menu svg {
+  width: 30px;
+  color: white;
+}
+
+.btn-perfil {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
 }
 
-.menu-bar {
-  width: 100%;
-  background-color: rgb(12, 106, 173, 0.8);
-  padding: 10px 0;
+.btn-perfil svg {
+  width: 45px;
 }
 
-.menu-inicio {
+.btn-perfil svg path {
+  fill: white;
+}
+
+.perfil-container {
   display: flex;
+  gap: 15px;
   justify-content: center;
   align-items: center;
-  background-color: #e6e6e6;
 }
 
 .btn-sair {
-  border: none;
-  border-radius: 6px;
-  outline: none;
-  text-transform: uppercase;
-  font-weight: 800;
-  color: rgb(13, 106, 173);
-  letter-spacing: 2px;
+  background-color: rgb(246, 42, 42);
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  border: 2px solid transparent;
 }
 
 .btn-sair:hover {
-  opacity: 0.8;
-  /* Reduz a opacidade quando o mouse passa por cima */
-  background-color: red;
+  border: 2px solid white;
 }
 
-.menu-btn-sair {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 5px;
+.btn-sair svg {
+  width: 22px;
 }
 
-.menu-inicio-text {
-  font-size: 12px;
+.btn-sair svg path {
+  stroke: white;
 }
 
 .conteudo {
