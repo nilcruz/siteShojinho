@@ -1,290 +1,124 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nilson Cruz Leite Neto</title>
-    <style>
-	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-
-        body {
-            font-family: 'Noto Sans', sans-serif;
-            color: rgb(13, 106, 173); /* Cor de texto */
-            background-color: white; /* Fundo branco */
-            margin: 0;
-            padding: 0;
-        }
-
-    	.menu-bar {
-      	    width: 100%;
-      	    background-color: rgb(12,106,173,0.8);
-      	    padding: 10px 0;
-      
-    	}
-
-    	.menu-bar-text {
-     	    display: flex;
-     	    justify-content:center;
-     	    align-items: center;
-     	    color: white;
-
-    	}
-
-    	.menu-justificativa{
-     	    display: flex;
-     	    justify-content:center;
-     	    align-items: center;
-     	    background-color:#E6E6E6
-
-    	}
-
-  	.btn-sair { 
-    	   border:none;
-           border-radius:6px;
-           outline:none;
-           text-transform: uppercase;
-           font-weight: 800;
-           color:rgb(13,106,173);
-           letter-spacing: 2px;
-           cursor: pointer;
-           transition: opacity 0.3s ease;
-    
-    	}
-
-    	.btn-sair:hover{
-    	   opacity: 0.8; /* Reduz a opacidade quando o mouse passa por cima */
-    	   background-color: red;  
-    	}
-  
-    	.menu-btn-sair{
-      	   display: flex;
-      	   justify-content: flex-end;
-      	   margin-right:5px;
-    	}
-    
-    	.menu-justificativa-text{
-      	   font-size: 12px;
-      
-    	}
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .card {
-            position: relative;
-            flex-direction: column;
-            background-color: #f5f5f5;
-            border: 1px solid #ccc;
-            border-radius: 15px;
-            box-shadow: 0px 5px 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        .profile-image-container {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin-left: auto; /* Move o container para a direita */
-        }
-
-        .profile-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .change-photo {
-            text-align: right; /* Alinhar o texto à direita */
-            cursor: pointer;
-            text-decoration: underline;
-            color: blue;
-        }
-
-        h1 {
-            font-size: 24px;
-        }
-
-        .field {
-            margin-bottom: 20px;
-        }
-
-        .label {
-            font-weight: bold;
-        }
-
-        .input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .edit-icon {
-            cursor: pointer;
-            color: rgb(13, 106, 173);
-        }
-
-        .edit-form {
-            display: none;
-            margin-top: 10px;
-        }
-
-        .edit-form.active {
-            display: block;
-        }
-
-        .edit-form button {
-            margin-top: 10px;
-        }
-
-	.footer-login {
-	    background-color: #333;
-            color: #fff;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            height: 40px; 
-	}
-
-	.footer-login p {
-            margin: 0;
-            padding: 15px 0;
-
-	}
-
-	button{
-
-	    background-color: #007bff;
-            color: #fff;
-            padding: 5px 5px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-	}
-
-	button:hover {
-    	    background-color: green; 
-            transform: scale(1.02);
-            color:white;
-	}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nilson Cruz Leite Neto</title>
+  <link rel="stylesheet" href="./styles/perfilProfessor.css">k
 </head>
+
 <body>
-   <div class="menu-bar">
-	<div class="menu-btn-sair">
-	    <button class="btn-sair">Sair</button>
-    	</div>
-        <div class="menu-bar-text">
-	    <h1> Secretaria Online - E.M Dr Roberto Shoji </h1> 
-        </div>
-   </div>
-	
-    <div class="container">
-        <h1>Seu perfil</h1>
-
-        <div class="card">
-            <div class="profile-image-container">
-                <img class="profile-image" src="perfil.png" alt="Foto de perfil">
-            </div>
-            <div class="change-photo" id="change-photo">Alterar sua foto</div>
-
-            <form class="edit-form" id="nome-edit-form">
-                <div class="field" id="new-nome">
-                    <label class="label">Nome Completo:</label>
-                    <input class="input" type="text" placeholder="Digite o novo nome" id="new-nome-input">
-                    <button type="submit">Salvar nome</button>
-                </div>
-            </form>
-
-            <div class="field">
-                <label class="label">Data de Nascimento:</label>
-                <div>20/08/1994</div>
-            </div>
-
-            <div class="field">
-                <label class="label">Registro Funcional:</label>
-                <div>Registro Funcional do Professor</div>
-            </div>
-
-            <div class="field">
-                <label class="label">Cargo:</label>
-                <div>Agente Administrativo</div>
-            </div>
-
-            <div class="field">
-                <label class="label">Login:</label>
-                <div>nilcruz</div>
-            </div>
-
-            <div class="field">
-                <label class="label">Senha:</label>
-                <div>
-                    ********
-                    <span class="edit-icon" id="edit-password">✏️ Alterar Senha</span>
-                </div>
-            </div>
-
-            <form class="edit-form" id="password-edit-form">
-                <div class="field" id="new-password">
-                    <label class="label">Nova senha:</label>
-                    <input class="input" type="password" placeholder="Digite a nova senha" id="new-password-input">
-                </div>
-
-                <div class="field" id="confirm-password">
-                    <label class="label">Confirme Nova senha:</label>
-                    <input class="input" type="password" placeholder="Digite a nova senha novamente" id="confirm-password-input">
-                    <button type="submit">Salvar senha</button>
-                </div>
-            </form>
-        </div>
+  <div class="menu-bar">
+    <div class="menu-btn-sair">
+      <button class="btn-sair">Sair</button>
     </div>
+    <div class="menu-bar-text">
+      <h1> Secretaria Online - E.M Dr Roberto Shoji </h1>
+    </div>
+  </div>
 
-    <script>
-        const editPasswordButton = document.getElementById('edit-password');
-        const editNomeButton = document.getElementById('new-nome-input');
-        const passwordEditForm = document.getElementById('password-edit-form');
-        const nomeEditForm = document.getElementById('nome-edit-form');
-        const changePhotoButton = document.getElementById('change-photo');
+  <div class="container">
+    <h1>Seu perfil</h1>
 
-        editPasswordButton.addEventListener('click', () => {
-            passwordEditForm.classList.toggle('active');
-            nomeEditForm.classList.remove('active');
-        });
+    <div class="card">
+      <div class="profile-image-container">
+        <img class="profile-image" src="perfil.png" alt="Foto de perfil">
+      </div>
+      <div class="change-photo" id="change-photo">Alterar sua foto</div>
 
-        editNomeButton.addEventListener('click', () => {
-            nomeEditForm.classList.toggle('active');
-            passwordEditForm.classList.remove('active');
-        });
+      <form class="edit-form" id="nome-edit-form">
+        <div class="field" id="new-nome">
+          <label class="label">Nome Completo:</label>
+          <input class="input" type="text" placeholder="Digite o novo nome" id="new-nome-input">
+          <button type="submit">Salvar nome</button>
+        </div>
+      </form>
 
-        changePhotoButton.addEventListener('click', () => {
-            const fileInput = document.createElement('input');
-            fileInput.type = 'file';
-            fileInput.accept = 'image/*';
-            fileInput.style.display = 'none';
+      <div class="field">
+        <label class="label">Data de Nascimento:</label>
+        <div>20/08/1994</div>
+      </div>
 
-            fileInput.addEventListener('change', (event) => {
-                const file = event.target.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = (e) => {
-                        const newProfileImage = document.querySelector('.profile-image');
-                        newProfileImage.src = e.target.result;
-                    };
-                    reader.readAsDataURL(file);
-                }
-            });
+      <div class="field">
+        <label class="label">Registro Funcional:</label>
+        <div>Registro Funcional do Professor</div>
+      </div>
 
-            fileInput.click();
-        });
-    </script>
+      <div class="field">
+        <label class="label">Cargo:</label>
+        <div>Agente Administrativo</div>
+      </div>
+
+      <div class="field">
+        <label class="label">Login:</label>
+        <div>nilcruz</div>
+      </div>
+
+      <div class="field">
+        <label class="label">Senha:</label>
+        <div>
+          ********
+          <span class="edit-icon" id="edit-password">✏️ Alterar Senha</span>
+        </div>
+      </div>
+
+      <form class="edit-form" id="password-edit-form">
+        <div class="field" id="new-password">
+          <label class="label">Nova senha:</label>
+          <input class="input" type="password" placeholder="Digite a nova senha" id="new-password-input">
+        </div>
+
+        <div class="field" id="confirm-password">
+          <label class="label">Confirme Nova senha:</label>
+          <input class="input" type="password" placeholder="Digite a nova senha novamente" id="confirm-password-input">
+          <button type="submit">Salvar senha</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const editPasswordButton = document.getElementById('edit-password');
+    const editNomeButton = document.getElementById('new-nome-input');
+    const passwordEditForm = document.getElementById('password-edit-form');
+    const nomeEditForm = document.getElementById('nome-edit-form');
+    const changePhotoButton = document.getElementById('change-photo');
+
+    editPasswordButton.addEventListener('click', () => {
+      passwordEditForm.classList.toggle('active');
+      nomeEditForm.classList.remove('active');
+    });
+
+    editNomeButton.addEventListener('click', () => {
+      nomeEditForm.classList.toggle('active');
+      passwordEditForm.classList.remove('active');
+    });
+
+    changePhotoButton.addEventListener('click', () => {
+      const fileInput = document.createElement('input');
+      fileInput.type = 'file';
+      fileInput.accept = 'image/*';
+      fileInput.style.display = 'none';
+
+      fileInput.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const newProfileImage = document.querySelector('.profile-image');
+            newProfileImage.src = e.target.result;
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      fileInput.click();
+    });
+  </script>
 </body>
 <footer class="footer-login">
   <p>&copy; 2023 Desenvolvido por Nilson Cruz. Todos os direitos reservados.</p>
 </footer>
+
 </html>

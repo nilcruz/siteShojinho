@@ -1,123 +1,168 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
-body{
-    width:100%;
-    font-family: 'Noto Sans', Sans-serif;
-    margin: 0;   
+body {
+  width: 100%;
+  font-family: 'Noto Sans', Sans-serif;
+  margin: 0;
+  height: 100vh;
 }
 
 .menu-bar {
   width: 100%;
-  background-color: rgb(12,106,173,0.8);
+  background-color: rgb(12, 106, 173, 0.8);
   padding: 10px 0;
 
 }
 
 .menu-bar-text {
-display: flex;
-justify-content:center;
-align-items: center;
-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 
 }
 
-.menu-atestado{
-display: flex;
-justify-content:center;
-align-items: center;
-background-color:#E6E6E6
+.menu-atestado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E6E6E6
+}
+
+.btn-sair {
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: rgb(13, 106, 173);
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 
 }
 
-.btn-sair { 
-border:none;
-border-radius:6px;
-outline:none;
-text-transform: uppercase;
-font-weight: 800;
-color:rgb(13,106,173);
-letter-spacing: 2px;
-cursor: pointer;
-transition: opacity 0.3s ease;
+.btn-sair:hover {
+  opacity: 0.8;
+  background-color: red;
+}
+
+.menu-btn-sair {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5px;
 
 }
 
-.btn-sair:hover{
-opacity: 0.8; 
-background-color: red;  
-}
-
-.menu-btn-sair{
-display: flex;
-justify-content: flex-end;
-margin-right:5px;
+.menu-text-atestado {
+  font-size: 12px;
 
 }
 
-.menu-text-atestado{
-font-size: 12px;
-
+.menu-container-atestado {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 20px;
+  align-items: center;
+  min-height: 90vh;
 }
 
-.menu-container-atestado{
-width:100%;
-height:15vw;
-display:flex;
-flex-direction:column;
-justify-content: center;
-gap: 20px;
-align-items:center;
-
-}
-
-.series-select:hover{
-cursor:pointer;
-border: 1px solid #007bff;
-transform: scale(1.02);
+.series-select:hover {
+  cursor: pointer;
+  border: 1px solid #007bff;
+  transform: scale(1.02);
 
 }
 
 .tabela-aluno-atestado {
-width: 80%;
-border-collapse: collapse;
-border: 1px solid #ddd;
-font-family: Arial, sans-serif;
+  width: 80%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  font-family: Arial, sans-serif;
 }
 
-.tabela-aluno-atestado th, .tabela-aluno-atestado td {
-border: 1px solid #ddd;
-padding: 8px;
-text-align: left;
+.tabela-aluno-atestado th,
+.tabela-aluno-atestado td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
 }
 
 .tabela-aluno-atestado th {
-background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 
 .tabela-aluno-atestado td:last-child {
-width: 30px; 
+  width: 30px;
 }
 
 .styled-footer-atestado {
-position: fixed;
-background-color: #333;
-color: #fff;
-text-align: center;
-padding: 10px 0;
-width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
 }
 
 .styled-footer-atestado p {
-margin: 0;
+  margin: 0;
 }
 
 .series-select {
-width: 20%; 
-margin: 0 auto; 
-padding: 10px;
-border: 1px solid #007bff; 
-border-radius: 5px;
-color: white; 
-background-color: #007bff; 
-}     
+  width: 20%;
+  /* margin: 0 auto; 
+margin-top: 25px; */
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  color: white;
+  background-color: #007bff;
+}
+
+.container-busca {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.buscar {
+  display: flex;
+}
+
+.buscar input {
+  padding: 10px;
+  border: 1px solid #007bff;
+  color: #0a325c;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+}
+
+.buscar input::placeholder{
+  color: #007bff;
+  font-size: 15px;
+}
+
+.buscar button {
+  width: 40px;
+  background: #007bff;
+  border: none;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.buscar button svg path {
+  color: white;
+}
+
+.buscar button:hover{
+  opacity: 0.8;
+}
