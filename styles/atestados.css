@@ -97,6 +97,7 @@ body {
 
 .tabela-aluno-atestado td:last-child {
   width: 30px;
+  text-align: center;
 }
 
 .styled-footer-atestado {
@@ -114,7 +115,7 @@ body {
 .series-select {
   width: 20%;
   /* margin: 0 auto; 
-margin-top: 25px; */
+  margin-top: 25px; */
   padding: 10px;
   border: 1px solid #007bff;
   border-radius: 5px;
@@ -129,7 +130,7 @@ margin-top: 25px; */
   flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
 }
 
 .buscar {
