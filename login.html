@@ -1,48 +1,42 @@
-<head>
-  <title>
-    Login - Secretaria E.M Dr. Roberto Shoji
-  </title>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-  <link rel="stylesheet" href="./styles./login.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="./styles/login.css">
 </head>
 
 <body>
-  <div class="main-login">
-    <div class="left-login">
-      <h1>
-        Faca login e acesse a secretaria <br> online da escola E.M Dr Roberto Shoji</h1>
-      <img src="./images/logo.png" class="left-login-image" alt="Logo">
+  <main class="login-container">
+    <div class="left-container">
+      <h1>Faça login e acesse a secretaria online da escola E.M Dr Roberto Shoji</h1>
+      <img src="./images/logo.png" alt="logo da escola E.M Dr Roberto Shoji">
     </div>
-    <div class="right-login">
-      <div class="card-login">
-        <h1>
-          LOGIN
-        </h1>
-
-        <div class="textfield">
-          <label for="usuario">Usuario:</label>
-          <input type="text" name="usuario" placeholder="Usuario">
+    <div class="form-login-container">
+      <div class="form-login-content">
+        <h1>Login</h1>
+        <div>
+          <label for="">Usuario</label>
+          <input placeholder="Usuario" type="text" name="" id="">
         </div>
-
-        <div class="textfield">
-          <label for="senha">Senha:</label>
-          <input type="password" name="senha" placeholder="Senha">
+        <div>
+          <label for="">Senha</label>
+          <input placeholder="Senha" type="text" name="" id="">
         </div>
+        <button id="btn-login" type="submit">ENTRAR</button>
 
-        <button class="btn-login">Entrar</button>
-
-        <p style="font-family: 'Noto Sans', Sans-serif; color: rgb(13, 106, 173); margin-top: 10px;">
-          Não possui cadastro? <a href="./cadastro.html"
-            style="text-decoration: underline; color: rgb(13, 106, 173); transition: color 0.5s;"> Clique aqui </a> e
-          fazer o seu registro.
+        <p>
+          Não possui cadastro? <a href="">Clique aqui</a> para criar uma conta
         </p>
       </div>
     </div>
-  </div>
-  </div>
+  </main>
 
+  <footer>
+    &copy; 2023 Desenvolvido por Nilson Cruz - Todos os direitos reservados
+  </footer>
 </body>
 
-<footer class="footer-login">
-  <p>&copy; 2023 Desenvolvido por Nilson Cruz. Todos os direitos reservados.</p>
-</footer>
+</html>
