@@ -1,70 +1,63 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro - E.M Dr. Roberto Shoji</title>
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="./styles/login.css">
   <link rel="stylesheet" href="./styles/cadastro.css">
 </head>
 
 <body>
-
-  <div class="main-login">
-    <div class="left-login">
+  <main class="login-container">
+    <div class="left-container">
       <h1>Faça seu cadastro para ter acesso a secretaria online da escola E.M Dr Roberto Shoji</h1>
-      <img src="./images/logo.png" class="left-login-image" alt="Logo">
+      <img src="./images/logo.png" alt="logo da escola E.M Dr Roberto Shoji">
     </div>
-
-    <div class="right-login">
-      <div class="card-login">
-        <h1>CADASTRO</h1>
-
-        <div class="textfield">
-          <label for="login">Login:</label>
-          <input type="text" name="login" placeholder="Login" required>
+    <div class="form-login-container">
+      <div class="form-login-content">
+        <h1>Cadastro</h1>
+        <div>
+          <label for="">Login</label>
+          <input placeholder="Nome de usuario" type="text" name="" id="">
         </div>
-
-        <div class="textfield">
-          <label for="senha">Senha:</label>
-          <input type="password" name="senha" placeholder="Senha" required>
+        <div>
+          <label for="">Senha</label>
+          <input placeholder="Senha" type="text" name="" id="">
         </div>
-
-        <div class="textfield">
-          <label for="email">Email:</label>
-          <input type="email" name="email" placeholder="Email" required>
+        <div>
+          <label for="">email</label>
+          <input placeholder="email" type="text" name="" id="">
         </div>
-
-        <div class="textfield">
-          <label for="nomeCompleto">Nome:</label>
-          <input type="text" name="nomeCompleto" placeholder="Nome Completo" pattern="[A-Za-zÀ-ú\s]+">
+        <div>
+          <label for="">nome</label>
+          <input placeholder="nome completo" type="text" name="" id="">
         </div>
-
-        <div class="textfield">
-          <label for="dataNascimento">Data de Nascimento:</label>
-          <input type="date" name="dataNascimento" required>
+        <div>
+          <label for="">data de nascimento</label>
+          <input placeholder="Data de nascimento" type="date" name="" id="">
         </div>
-
-        <div class="textfield">
-          <label for="registroFuncional">Registro Funcional:</label>
-          <input type="text" name="registroFuncional" placeholder="Registro Funcional" required>
+        <div>
+          <label for="">registro funcional</label>
+          <input placeholder="Senha" type="text" name="" id="">
         </div>
-
-        <div class="textfield">
-          <label for="cargo">Cargo:</label>
-          <input type="text" name="cargo" placeholder="Cargo" required>
+        <div>
+          <label for="">cargo</label>
+          <input placeholder="Senha" type="text" name="" id="">
         </div>
+        <button id="btn-login" type="submit">CADASTRAR</button>
 
-
-        <button class="btn-cadastrar">Cadastrar</button>
+        <p>
+          Já possui um cadastro? <a href="./cadastro.html">Clique aqui</a> para logar em sua conta
+        </p>
       </div>
     </div>
-  </div>
+  </main>
 
+  <footer>
+    &copy; 2023 Desenvolvido por Nilson Cruz - Todos os direitos reservados
+  </footer>
 </body>
-
-<footer class="footer-login">
-  <p>&copy; 2023 Desenvolvido por Nilson Cruz. Todos os direitos reservados.</p>
-</footer>
 
 </html>

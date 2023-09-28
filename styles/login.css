@@ -89,15 +89,22 @@ body {
 #btn-login {
   align-self: center;
   width: 200px;
+  background-color: #fff;
+  cursor: pointer;
   height: 40px;
   font-weight: bold;
   color: rgb(13, 106, 173);
   border-radius: 5px;
   border: 1px solid rgb(13, 106, 173);
+  transition: 500ms;
 }
 
-footer {
-  
+#btn-login:hover {
+  background-color: rgb(13, 106, 173);
+  color: white;
+}
+
+footer { 
   background-color: #333;
   color: #fff;
   text-align: center;
