@@ -161,3 +161,18 @@ img {
 .icon-with-text p {
   margin-top: 5px;
 }
+
+.styled-footer-atestado {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.styled-footer-atestado p {
+  margin: 0;
+}
+
+
