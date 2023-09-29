@@ -1,9 +1,10 @@
-/* Estilos CSS atualizados */
+﻿@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+  width: 100%;
+  font-family: 'Noto Sans', Sans-serif;
+  margin: 0;
+  height: 100vh;
 }
 
 .menu-bar {
