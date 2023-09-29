@@ -124,3 +124,15 @@ body {
   transform: scale(1.1);
   cursor: pointer;
 }
+
+.menu-inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E6E6E6
+}
+
+.menu-inicio-text {
+  font-size: 12px;
+
+}
