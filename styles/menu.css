@@ -25,10 +25,6 @@
 
 }
 
-.btn-menu svg:hover {
-  transform: scale(1.05);
-}
-
 .btn-perfil {
   display: flex;
   flex-direction: column;
@@ -39,6 +35,7 @@
 
 .btn-perfil:hover {
   transform: scale(1.05);
+  cursor:pointer;
 }
 
 .btn-perfil svg {
@@ -73,6 +70,7 @@
 
 .btn-sair:hover {
   border: 2px solid white;
+  transform: scale(1.1);
 }
 
 .btn-sair svg {
@@ -81,4 +79,35 @@
 
 .btn-sair svg path {
   stroke: white;
+}
+
+.menu-item {
+  text-align: center;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+  cursor:pointer;
+}
+
+.menu-text {
+  font-size: 16px;
+  color: #fff; 
+}
+
+
+.icone-link {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0; 
+  padding: 0; 
+  line-height: 1; 
+}
+
+a{
+  text-decoration: none;
+  display: inline-block;
+  margin: 0; 
+  padding: 0; 
+  line-height: 1;
 }
