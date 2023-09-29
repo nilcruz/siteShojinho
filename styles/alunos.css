@@ -11,6 +11,84 @@ body {
   padding: 20px;
   text-align: center;
 }
+
+.menu-prontuario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E6E6E6
+}
+
+.menu-text-prontuario {
+  font-size: 12px;
+
+}
+
+.series-select {
+  width: 20%;
+  /* margin: 0 auto; 
+  margin-top: 25px; */
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  color: white;
+  background-color: #007bff;
+}
+
+
+.series-select:hover {
+  cursor: pointer;
+  border: 1px solid #007bff;
+  transform: scale(1.02);
+
+}
+
+.container-busca {
+  width: 100%;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.buscar {
+  display: flex;
+}
+
+.buscar input {
+  padding: 10px;
+  border: 1px solid #007bff;
+  color: #0a325c;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+}
+
+.buscar input::placeholder{
+  color: #007bff;
+  font-size: 15px;
+}
+
+.buscar button {
+  width: 40px;
+  background: #007bff;
+  border: none;
+  outline: none;
+  border-radius: 0 5px 5px 0;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.buscar button svg path {
+  color: white;
+}
+
+.buscar button:hover{
+  opacity: 0.8;
+}
+
 .container {
   padding: 20px;
 }
