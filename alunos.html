@@ -46,8 +46,36 @@
     </div>
   </nav>
 
+  <div class="menu-prontuario">
+    <div class="menu-text-prontuario">
+      <h1> Prontuarios Digitais </h1>
+    </div>
+  </div>
+
   <!-- Primeiro Card -->
   <div class="container">
+      <div class="container-busca">
+      <div class="buscar">
+        <input type="text" name="" id="" placeholder="Buscar atestados por nome">
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+            <path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none"
+              stroke="currentColor" stroke-miterlimit="10" stroke-width="32" />
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"
+              d="M338.29 338.29L448 448" />
+          </svg>
+        </button>
+      </div>
+      <select class="series-select">
+        <option value="1">SELECIONE A SÉRIE</option>
+        <option value="1">1º ANO</option>
+        <option value="2">2º ANO</option>
+        <option value="3">3º ANO</option>
+        <option value="4">4º ANO</option>
+        <option value="5">5º ANO</option>
+      </select>
+    </div>
+
     <div class="card" onclick="toggleInformacoes(this)">
       <h2>Nome do Aluno 1</h2>
       <div class="informacoes-extras">
@@ -60,21 +88,25 @@
         <div class="right-section">
           <div class="icons-container">
             <div class="icon-with-text">
-              <img src="C:\Users\gilsonj\Desktop\siteShojinho-main\images\matricula.jpeg" alt="Ficha de Matricula" data-icon="icon1">
+              <img src=".\images\matricula.png" alt="Ficha de Matricula" data-icon="icon1">
               <p>Ficha de Matricula</p>
             </div>
             <div class="icon-with-text">
-              <img src="C:\Users\gilsonj\Desktop\siteShojinho-main\images\certidao.png" alt="Certidão de Nascimento" data-icon="icon2">
+              <img src=".\images\nascimento.png" alt="Certidão de Nascimento" data-icon="icon2">
               <p>Cert. Nascimento</p>
             </div>
             <div class="icon-with-text">
-              <img src="C:\Users\gilsonj\Desktop\siteShojinho-main\images\residencia.png" alt="Comprovante de Residencia" data-icon="icon3">
+              <img src=".\images\residencia.png" alt="Comprovante de Residencia" data-icon="icon3">
               <p>Comp. Residencia</p>
             </div>
             <div class="icon-with-text">
-              <img src="C:\Users\gilsonj\Desktop\siteShojinho-main\images\vacinacao.png" alt="Carteira de Vacinação" data-icon="icon4">
+              <img src=".\images\vacina.png" alt="Carteira de Vacinação" data-icon="icon4">
               <p>Cart. Vacinação</p>
             </div>
+            <div class="icon-with-text">
+              <img src=".\images\declaracao.png" alt="Declaração Escolar" data-icon="icon4">
+              <p>Declaração Escolar</p>
+            </div>            
           </div>
         </div>
       </div>
