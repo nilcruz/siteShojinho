@@ -55,21 +55,21 @@ CREATE TABLE Justificativa (
 -- INSERTS --
 
 
--- Inserção na tabela Professor
+-- InserÃ§Ã£o na tabela Professor
 INSERT INTO Professor (nome, data_nascimento, registro_funcional, login, password)
 VALUES
-    ('João Silva', '1980-05-15', 'RF123', 'joao123', 'senha123'),
+    ('JoÃ£o Silva', '1980-05-15', 'RF123', 'joao123', 'senha123'),
     ('Maria Santos', '1975-09-20', 'RF456', 'maria456', 'segura123'),
     ('Pedro Souza', '1992-02-10', 'RF789', 'pedro789', 'protegida456');
 
--- Inserção na tabela Serie
+-- InserÃ§Ã£o na tabela Serie
 INSERT INTO Serie (nm_serie, id_professor)
 VALUES
-    ('1º ANO', 1),
-    ('2º ANO', 2),
-    ('3º ANO', 3);
+    ('1Âº ANO', 1),
+    ('2Âº ANO', 2),
+    ('3Âº ANO', 3);
 
--- Inserção na tabela Aluno
+-- InserÃ§Ã£o na tabela Aluno
 INSERT INTO Aluno (nm_aluno, dt_nasc, ra_aluno, id_serie, dt_matricula, dt_transferencia)
 VALUES
     ('Carlos Rodrigues', '2005-06-30', '12345', 1, '2023-08-25', NULL),
@@ -78,7 +78,7 @@ VALUES
     ('Juliana Fernandes', '2003-11-08', '98765', 3, '2023-08-25', NULL),
     ('Mateus Santos', '2007-02-20', '13579', 1, '2023-08-25', NULL);
 
--- Inserção na tabela Atestado
+-- InserÃ§Ã£o na tabela Atestado
 INSERT INTO Atestado (id_aluno, dt_inicio, qtd_dias, dt_retorno)
 VALUES
     (1, '2023-08-01', 5, '2023-08-06'),
@@ -87,33 +87,33 @@ VALUES
     (4, '2023-08-15', 4, '2023-08-19'),
     (5, '2023-08-03', 1, '2023-08-04');
 
--- Inserção na tabela Justificativa
+-- InserÃ§Ã£o na tabela Justificativa
 INSERT INTO Justificativa (id_aluno, motivo_justificativa, dt_justificativa, qtd_dias)
 VALUES
-    (1, 'Doença', '2023-08-02', 2),
+    (1, 'DoenÃ§a', '2023-08-02', 2),
     (2, 'Falecimento de um familiar', '2023-08-11', 1),
-    (3, 'Participação em evento esportivo', '2023-08-06', 1),
-    (4, 'Atestado médico', '2023-08-16', 2),
+    (3, 'ParticipaÃ§Ã£o em evento esportivo', '2023-08-06', 1),
+    (4, 'Atestado mÃ©dico', '2023-08-16', 2),
     (5, 'Viagem familiar', '2023-08-04', 1);
 
 
 -- SELECTS --
 
-SELECIONA E EXIBE O NOME DE TODOS OS ALUNOS DO 1º ANO
+SELECIONA E EXIBE O NOME DE TODOS OS ALUNOS DO 1Âº ANO
 
 SELECT Aluno.nm_aluno
 FROM Aluno
 INNER JOIN Serie ON Aluno.id_serie = Serie.id_serie
-WHERE Serie.nm_serie = '1º ANO';
+WHERE Serie.nm_serie = '1Âº ANO';
 
-SELECIONA E EXIBE O NOME E INFORMAÇÕES DE TODOS OS ATESTADOS QUE UM ALUNO POSSUI
+SELECIONA E EXIBE O NOME E INFORMAÃ‡Ã•ES DE TODOS OS ATESTADOS QUE UM ALUNO POSSUI
 
 SELECT Aluno.nm_aluno, Atestado.*
 FROM Atestado
 INNER JOIN Aluno ON Atestado.id_aluno = Aluno.id_aluno
 WHERE Aluno.id_aluno = 1;
 
-SELECIONA E EXIBE O NOME E INFORMAÇÕES DE TODOS AS JUSTIFICATIVAS QUE UM ALUNO POSSUI
+SELECIONA E EXIBE O NOME E INFORMAÃ‡Ã•ES DE TODOS AS JUSTIFICATIVAS QUE UM ALUNO POSSUI
 
 SELECT Aluno.nm_aluno, Justificativa.*
 FROM Justificativa
@@ -121,7 +121,7 @@ INNER JOIN Aluno ON Justificativa.id_aluno = Aluno.id_aluno
 WHERE Aluno.id_aluno = 2;
 
 
-SELECIONA E EXIBE O NOME DO PROFESSOR E A QUE SÉRIE ELE PERTENCE
+SELECIONA E EXIBE O NOME DO PROFESSOR E A QUE SÃ‰RIE ELE PERTENCE
 
 SELECT Professor.nome AS NomeProfessor, Serie.nm_serie AS SerieDoProfessor
 FROM Professor
