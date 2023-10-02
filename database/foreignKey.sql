@@ -12,7 +12,7 @@ ALTER TABLE AlunoTelefones
 ADD FOREIGN KEY (idAluno) REFERENCES Alunos(idAluno);
 
 ALTER TABLE AlunoTelefones
-ADD FOREIGN KEY (idTelefone) REFERENCES TelefonesContato(idTelefone);
+ADD FOREIGN KEY (idTelefone) REFERENCES Telefones(idTelefone);
 
 -- Adiciona a foreign key na tabela AlunoJustificativa
 ALTER TABLE AlunoJustificativa
