@@ -1,21 +1,21 @@
--- CRIAÇÃO DA TABELA ALUNOS --
-
 CREATE TABLE Alunos (
     idAluno INT AUTO_INCREMENT PRIMARY KEY,
     NomeCompleto VARCHAR(255) NOT NULL,
     DataNascimento DATE NOT NULL,
     RA VARCHAR(20) NOT NULL,
-    AutorizacaoSaida ENUM('sim', 'nao') NOT NULL
+    AutorizacaoSaida ENUM('sim', 'nao') NOT NULL,
+    idSerie INT
 );
 
--- CRIAÇÃO DA TABELA RESPONSAVEIS --
+CREATE TABLE Series (
+    idSerie INT AUTO_INCREMENT PRIMARY KEY,
+    NomeSerie VARCHAR(255) NOT NULL
+);
 
 CREATE TABLE Responsaveis (
     idResponsavel INT AUTO_INCREMENT PRIMARY KEY,
     NomeResponsavel VARCHAR(255) NOT NULL
 );
-
--- CRIAÇÃO DA TABELA TELEFONES --
 
 CREATE TABLE Telefones (
     idTelefone INT AUTO_INCREMENT PRIMARY KEY,
@@ -23,60 +23,44 @@ CREATE TABLE Telefones (
     NumeroTelefone VARCHAR(20) NOT NULL
 );
 
--- CRIAÇÃO DA TABELA JUSTIFICATIVAS --
-
 CREATE TABLE Justificativas (
     idJustificativa INT AUTO_INCREMENT PRIMARY KEY,
     DataJustificativa DATE NOT NULL,
     DescricaoJustificativa TEXT
 );
 
--- CRIAÇÃO DA TABELA ASSOCIATIVA ALUNORESPONSAVEIS -- 
-
 CREATE TABLE AlunoResponsaveis (
     idAluno INT NOT NULL,
     idResponsavel INT NOT NULL,
-    PRIMARY KEY (idAluno, idResponsavel),
+    PRIMARY KEY (idAluno, idResponsavel)
 );
-
--- CRIAÇÃO DA TABELA ASSOCIATIVA ALUNOTELEFONES -- 
 
 CREATE TABLE AlunoTelefones (
     idAluno INT NOT NULL,
     idTelefone INT NOT NULL,
-    PRIMARY KEY (idAluno, idTelefone),
+    PRIMARY KEY (idAluno, idTelefone)
 );
-
--- CRIAÇÃO DA TABELA ASSOCIATIVA ALUNOJUSTIFICATIVAS -- 
 
 CREATE TABLE AlunoJustificativa (
     idAluno INT NOT NULL,
     idJustificativa INT NOT NULL,
-    PRIMARY KEY (idAluno, idJustificativa),
+    PRIMARY KEY (idAluno, idJustificativa)
 );
-
-
--- CRIAÇÃO DA TABELA ATESTADOSMEDICOS --
 
 CREATE TABLE AtestadosMedicos (
     idAtestado INT AUTO_INCREMENT PRIMARY KEY,
     idAluno INT NOT NULL,
     DataEntrega DATE NOT NULL,
     DataAtestado DATE NOT NULL,
-    DiasAtestado INT NOT NULL,
+    DiasAtestado INT NOT NULL
 );
-
--- CRIAÇÃO DA TABELA ARQUIVOSALUNO (ARMAZENAR ARQUIVOS PDF)
 
 CREATE TABLE ArquivosAluno (
     idArquivo INT AUTO_INCREMENT PRIMARY KEY,
     idAluno INT NOT NULL,
     NomeArquivo VARCHAR(255) NOT NULL,
-    Arquivo BLOB NOT NULL,
+    Arquivo BLOB NOT NULL
 );
-
-
--- CRIAÇÃO DA TABELA PROFESSORES --
 
 CREATE TABLE Professores (
     idProfessor INT AUTO_INCREMENT PRIMARY KEY,
@@ -89,22 +73,12 @@ CREATE TABLE Professores (
     FotoPerfil BLOB
 );
 
--- CRIAÇÃO DA TABELA SERIES --
-
-CREATE TABLE Series (
-    idSerie INT AUTO_INCREMENT PRIMARY KEY,
-    NomeSerie VARCHAR(255) NOT NULL
-);
-
-
--- CRIAÇÃO DA TABELA ASSOCIATIVA SERIEPROFESSORES --
 CREATE TABLE SeriesProfessores (
     idProfessor INT NOT NULL,
     idSerie INT NOT NULL,
-    PRIMARY KEY (idProfessor, idSerie),
+    PRIMARY KEY (idProfessor, idSerie)
 );
 
--- CRIAÇÃO DA TABELA USUARIOSADMINISTRADORES --
 CREATE TABLE UsuariosAdministradores (
     idUsuarioAdmin INT AUTO_INCREMENT PRIMARY KEY,
     NomeCompleto VARCHAR(255) NOT NULL,
@@ -115,8 +89,6 @@ CREATE TABLE UsuariosAdministradores (
     TelefoneContato VARCHAR(255) NOT NULL,
     FotoPerfil BLOB
 );
-
--- CRIAÇÃO DA TABELA EVENTOS --
 
 CREATE TABLE Eventos (
     idEvento INT AUTO_INCREMENT PRIMARY KEY,
