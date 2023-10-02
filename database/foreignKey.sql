@@ -1,42 +1,26 @@
 -- CRIAÇÃO DAS CHAVES ESTRANGEIRAS --
 
--- Adiciona a foreign key na tabela AlunoResponsaveis
-ALTER TABLE AlunoResponsaveis
-ADD FOREIGN KEY (idAluno) REFERENCES Alunos(idAluno);
+-- Aluno com Série 1 X N --
+ALTER TABLE Alunos ADD FOREIGN KEY (idSerie) REFERENCES Series(idSerie);
 
-ALTER TABLE AlunoResponsaveis
-ADD FOREIGN KEY (idResponsavel) REFERENCES Responsaveis(idResponsavel);
+-- Aluno Responsaveis N X N --
+ALTER TABLE AlunoResponsaveis ADD FOREIGN KEY (idAluno) REFERENCES Alunos(idAluno);
+ALTER TABLE AlunoResponsaveis ADD FOREIGN KEY (idResponsavel) REFERENCES Responsaveis(idResponsavel);
 
--- Adiciona a foreign key na tabela AlunoTelefones
-ALTER TABLE AlunoTelefones
-ADD FOREIGN KEY (idAluno) REFERENCES Alunos(idAluno);
+-- Aluno Telefones N X N --
+ALTER TABLE AlunoTelefones ADD FOREIGN KEY (idAluno) REFERENCES Alunos(idAluno);
+ALTER TABLE AlunoTelefones ADD FOREIGN KEY (idTelefone) REFERENCES Telefones(idTelefone);
 
-ALTER TABLE AlunoTelefones
-ADD FOREIGN KEY (idTelefone) REFERENCES Telefones(idTelefone);
+-- Aluno Justificativa N X N  --
+ALTER TABLE AlunoJustificativa ADD FOREIGN KEY (idAluno) REFERENCES Alunos(idAluno);
+ALTER TABLE AlunoJustificativa ADD FOREIGN KEY (idJustificativa) REFERENCES Justificativas(idJustificativa);
 
--- Adiciona a foreign key na tabela AlunoJustificativa
-ALTER TABLE AlunoJustificativa
-ADD FOREIGN KEY (idAluno) REFERENCES Alunos(idAluno);
+-- Atestados Medicos 1 X N --
+ALTER TABLE AtestadosMedicos ADD FOREIGN KEY (idAluno) REFERENCES Alunos(idAluno);
 
-ALTER TABLE AlunoJustificativa
-ADD FOREIGN KEY (idJustificativa) REFERENCES Justificativas(idJustificativa);
+-- Arquivos com Aluno 1 X N --
+ALTER TABLE ArquivosAluno ADD FOREIGN KEY (idAluno) REFERENCES Alunos(idAluno);
 
--- Adiciona a foreign key na tabela AtestadosMedicos
-ALTER TABLE AtestadosMedicos
-ADD FOREIGN KEY (idAluno) REFERENCES Alunos(idAluno);
-
--- Adiciona a foreign key na tabela ArquivosAluno
-ALTER TABLE ArquivosAluno
-ADD FOREIGN KEY (idAluno) REFERENCES Alunos(idAluno);
-
--- Adiciona a foreign key na tabela SerieProfessores
-ALTER TABLE SerieProfessores
-ADD FOREIGN KEY (idProfessor) REFERENCES Professores(idProfessor);
-
-ALTER TABLE SerieProfessores
-ADD FOREIGN KEY (idSerie) REFERENCES Series(idSerie);
-
-
-
-
-
+-- Tabela SeriesProfessores N X N --
+ALTER TABLE SeriesProfessores ADD FOREIGN KEY (idProfessor) REFERENCES Professores(idProfessor);
+ALTER TABLE SeriesProfessores ADD FOREIGN KEY (idSerie) REFERENCES Series(idSerie);
