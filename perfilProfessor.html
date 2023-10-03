@@ -12,7 +12,6 @@
 <body>
   <nav class="menu-container">
     <div class="menu-content">
-	
       <span class="btn-menu">
         <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
           <path d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212"
@@ -21,9 +20,7 @@
             stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
         </svg>
       </span>
-	  
       <h1>Secretaria Online - E.M Dr Roberto Shoji </h1>
-	  
       <div class="perfil-container">
         <span class="btn-perfil">
           <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
@@ -48,112 +45,99 @@
 
   <div class="container">
     <h1>Seu perfil</h1>
-
-	<div class="card">
-		<div class="left-section">
-			<div class="profile-image-container">
-				<img class="profile-image" src="./images/perfil.jpg" alt="Foto de perfil">
-			</div>
-			<div class="change-photo" id="change-photo">Alterar sua foto</div>
-		</div>
-	
-		<div class="right-section">
-			<h1>Seu perfil</h1>
-			      <form class="edit-form" id="nome-edit-form">
-        <div class="field" id="new-nome">
-          <label class="label">Nome Completo:</label>
-          <input class="input" type="text" placeholder="Digite o novo nome" id="new-nome-input">
-          <button type="submit">Salvar nome</button>
-        </div>
-      </form>
-
-      <div class="field">
-        <label class="label">Data de Nascimento:</label>
-        <div>20/08/1994</div>
-      </div>
-
-      <div class="field">
-        <label class="label">Registro Funcional:</label>
-        <div>Registro Funcional do Professor</div>
-      </div>
-
-      <div class="field">
-        <label class="label">Cargo:</label>
-        <div>Agente Administrativo</div>
-      </div>
-
-      <div class="field">
-        <label class="label">Login:</label>
-        <div>nilcruz</div>
-      </div>
-
-      <div class="field">
-        <label class="label">Senha:</label>
-        <div>
-          ********
-          <span class="edit-icon" id="edit-password">✏️ Alterar Senha</span>
+    <div class="card">
+      <div class="left-section">
+        <div class="profile-image-container">
+          <label for="file-input" class="overlay" id="overlay">Alterar imagem</label>
+          <input type="file" accept="image/*" id="file-input">
+          <img class="profile-image" src="./images/perfil.jpg" alt="Foto de perfil" id="profile-image">
         </div>
       </div>
-
-      <form class="edit-form" id="password-edit-form">
-        <div class="field" id="new-password">
-          <label class="label">Nova senha:</label>
-          <input class="input" type="password" placeholder="Digite a nova senha" id="new-password-input">
+      <div class="right-section">
+        <h1>Seu perfil</h1>
+        <form class="edit-form" id="nome-edit-form">
+          <div class="field" id="new-nome">
+            <label class="label">Nome Completo:</label>
+            <input class="input" type="text" placeholder="Digite o novo nome" id="new-nome-input">
+            <button type="submit">Salvar nome</button>
+          </div>
+        </form>
+        <div class="field">
+          <label class="label">Data de Nascimento:</label>
+          <div>20/08/1994</div>
         </div>
-
-        <div class="field" id="confirm-password">
-          <label class="label">Confirme Nova senha:</label>
-          <input class="input" type="password" placeholder="Digite a nova senha novamente" id="confirm-password-input">
-          <button type="submit">Salvar senha</button>
+        <div class="field">
+          <label class="label">Registro Funcional:</label>
+          <div>Registro Funcional do Professor</div>
         </div>
-      </form>
+        <div class="field">
+          <label class="label">Cargo:</label>
+          <div>Agente Administrativo</div>
+        </div>
+        <div class="field">
+          <label class="label">Login:</label>
+          <div>nilcruz</div>
+        </div>
+        <div class="field">
+          <label class="label">Senha:</label>
+          <div>
+            ********
+            <span class="edit-icon" id="edit-password">✏️ Alterar Senha</span>
+          </div>
+        </div>
+        <form class="edit-form" id="password-edit-form">
+          <div class="field" id="new-password">
+            <label class="label">Nova senha:</label>
+            <input class="input" type="password" placeholder="Digite a nova senha" id="new-password-input">
+          </div>
+          <div class="field" id="confirm-password">
+            <label class="label">Confirme Nova senha:</label>
+            <input class="input" type="password" placeholder="Digite a nova senha novamente" id="confirm-password-input">
+            <button type="submit">Salvar senha</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-		</div>
-	</div>
-	
 
-  <script>
-    const editPasswordButton = document.getElementById('edit-password');
-    const editNomeButton = document.getElementById('new-nome-input');
-    const passwordEditForm = document.getElementById('password-edit-form');
-    const nomeEditForm = document.getElementById('nome-edit-form');
-    const changePhotoButton = document.getElementById('change-photo');
+<script>
+const editPasswordButton = document.getElementById('edit-password');
+const editNomeButton = document.getElementById('new-nome-input');
+const passwordEditForm = document.getElementById('password-edit-form');
+const nomeEditForm = document.getElementById('nome-edit-form');
+const changePhotoButton = document.getElementById('overlay');
 
-    editPasswordButton.addEventListener('click', () => {
-      passwordEditForm.classList.toggle('active');
-      nomeEditForm.classList.remove('active');
-    });
+editPasswordButton.addEventListener('click', () => {
+  passwordEditForm.classList.toggle('active');
+  nomeEditForm.classList.remove('active');
+});
 
-    editNomeButton.addEventListener('click', () => {
-      nomeEditForm.classList.toggle('active');
-      passwordEditForm.classList.remove('active');
-    });
+editNomeButton.addEventListener('click', () => {
+  nomeEditForm.classList.toggle('active');
+  passwordEditForm.classList.remove('active');
+});
+const overlay = document.getElementById('file-input');
+const fileInput = document.getElementById('file-input');
+const profileImage = document.getElementById('profile-image');
 
-    changePhotoButton.addEventListener('click', () => {
-      const fileInput = document.createElement('input');
-      fileInput.type = 'file';
-      fileInput.accept = 'image/*';
-      fileInput.style.display = 'none';
+overlay.addEventListener('click', () => {
+  fileInput.click();
+});
 
-      fileInput.addEventListener('change', (event) => {
-        const file = event.target.files[0];
-        if (file) {
-          const reader = new FileReader();
-          reader.onload = (e) => {
-            const newProfileImage = document.querySelector('.profile-image');
-            newProfileImage.src = e.target.result;
-          };
-          reader.readAsDataURL(file);
-        }
-      });
-
-      fileInput.click();
-    });
-  </script>
+fileInput.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      profileImage.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+});
+</script>
+  <footer class="footer-login">
+    <p>&copy; 2023 Desenvolvido por Nilson Cruz. Todos os direitos reservados.</p>
+  </footer>
 </body>
-<footer class="footer-login">
-  <p>&copy; 2023 Desenvolvido por Nilson Cruz. Todos os direitos reservados.</p>
-</footer>
 
 </html>
